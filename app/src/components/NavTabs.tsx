@@ -5,27 +5,34 @@ import { motion } from "framer-motion"
 import { User, Briefcase, Code2, Music } from "lucide-react"
 
 interface NavTab { 
-    href: string, 
+    slug: string, 
     label: string, 
     icon: React.ElementType 
 }
 
 const tabs: NavTab[] = [
-    { href: '/', label: 'About Me', icon: User },
-    { href: '/experience', label: 'Experience', icon: Briefcase },
-    { href: '/projects', label: 'Software', icon: Code2 },
-    { href: '/personal', label: 'Projects', icon: Music },
+    { slug: '/', label: 'About Me', icon: User },
+    { slug: '/experience', label: 'Experience', icon: Briefcase },
+    { slug: '/projects', label: 'Software', icon: Code2 },
+    { slug: '/personal', label: 'Projects', icon: Music },
 ]
 
 export default function NavTabs() {
     const pathname = usePathname()
-    const activeIndex = tabs.findIndex(tab => tab.href === pathname)
+    const activeIndex = tabs.findIndex(tab =>
+        tab.slug === '/' 
+          ? pathname === '/' 
+          : pathname.startsWith(tab.slug)
+      );
 
     const generateTab = (tab: NavTab) => {
         const Icon = tab.icon
-        const isActive = pathname === tab.href
+        const isActive = tab.slug === '/' 
+            ? pathname === '/' 
+            : pathname.startsWith(tab.slug);
+
         return (
-            <Link key={tab.href} href={tab.href} scroll={false} className="flex-1">
+            <Link key={tab.slug} href={tab.slug} scroll={false} className="flex-1">
                 <div
                     className={`flex items-center justify-center gap-2 px-0 py-2 sm:px-4 sm:py-2
                         rounded-full font-medium transition-all duration-200 w-full relative z-10
