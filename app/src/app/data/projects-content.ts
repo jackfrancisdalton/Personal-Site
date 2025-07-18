@@ -1,6 +1,6 @@
 import { SoftwareProject } from "@/types/ContentTypes";
 
-export const projects: SoftwareProject[] = [
+export const PROJECTS: SoftwareProject[] = [
     {
         slug: "gitwit",
         name: "GitWit",

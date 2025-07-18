@@ -9,12 +9,12 @@ interface GridProps {
 export default function Grid({ children, className = "" }: GridProps) {
     return (
         <motion.div
-            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ${className}`}
+            className={`grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6 ${className}`}
             initial="hidden"
             animate="visible"
             variants={{
                 hidden: {},
-                visible: { transition: { staggerChildren: 0.08 } },
+                visible: { transition: { staggerChildren: 0.12 } },
             }}
         >
             {children}

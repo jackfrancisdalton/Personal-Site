@@ -1,5 +1,5 @@
 "use client";
-import { projects } from "@/app/data/projects";
+import { PROJECTS } from "@/app/data/projects-content";
 import DetailsLayout from "@/components/DetailsLayout";
 import { SoftwareProject } from "@/types/ContentTypes";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import Link from "next/link";
 type Props = { params: { slug: string } };
 
 export default function ProjectDetailsPage({ params }: Props) {
-  const project: SoftwareProject | undefined = projects.find(
+  const project: SoftwareProject | undefined = PROJECTS.find(
     (proj) => proj.slug === params.slug
   );
 

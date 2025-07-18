@@ -28,16 +28,16 @@ export default function GridCard({
     return (
         <motion.div
             className={`cursor-pointer bg-white/10 rounded-2xl overflow-hidden shadow-magic flex flex-col transition transform hover:scale-[1.025] hover:shadow-xl ${className}`}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 1 }}
+            whileHover={{ scale: 1.05, animationDuration: 0.2 }}
+            whileTap={{ scale: 1, animationDuration: 0.2 }}
             variants={{
-                hidden: { opacity: 0, y: 40 },
+                hidden: { opacity: 0, y: 20 }, 
                 visible: { opacity: 1, y: 0 },
             }}
             transition={{
                 type: "tween",
-                duration: 0.4,
-                ease: "easeOut"
+                duration: 0.7,                
+                ease: "easeInOut"             
             }}
             onClick={onClick}
             tabIndex={0} // TODO spefiect tab index in props

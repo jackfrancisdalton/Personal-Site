@@ -2,33 +2,8 @@
 import Grid from "@/components/Grid"
 import GridCard from "@/components/GridCard"
 import { useRouter } from "next/navigation"
+import { HOBBIES_CONTENT } from "../data/hobbies-content"
 
-const projects = [
-    {
-        slug: "Pallet Table DIY",
-        name: "pallet-table",
-        description: "Description of project two.",
-        image: "/images/project2.jpg",
-    },
-    {
-        slug: "Balcony DIY",
-        name: "balcony-diy",
-        description: "Description of project three.",
-        image: "/images/project3.jpg",
-    },
-    {
-        slug: "Music Projects",
-        name: "balcony-diy",
-        description: "Description of project three.",
-        image: "/images/project3.jpg",
-    },
-    {
-        slug: "French Certifications",
-        name: "frech-certiciations",
-        description: "Description of project three.",
-        image: "/images/project3.jpg",
-    },
-];
 
 export default function PersonalPage() {
   const router = useRouter()
@@ -37,7 +12,7 @@ export default function PersonalPage() {
     <section>
       <h1 className="text-2xl font-bold mb-6 text-white">Personal Projects</h1>
       <Grid>
-        {projects.map((project) => (
+        {HOBBIES_CONTENT.map((project) => (
           <GridCard
             key={project.slug}
             image={project.image}
