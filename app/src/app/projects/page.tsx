@@ -22,6 +22,12 @@ const projects = [
         description: "Description of project three.",
         image: "/images/project3.jpg",
     },
+    {
+      slug: "Home Automation System",
+      name: "home-automation",
+      description: "Description of project one.",
+      image: "/images/project1.jpg",
+    },
 ];
 
 export default function ProjectsPage() {

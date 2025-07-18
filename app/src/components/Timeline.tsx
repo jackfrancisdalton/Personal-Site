@@ -2,21 +2,31 @@
 import { TimelineItem } from "@/types/TimelineTypes";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Briefcase, Code2, GraduationCap, LucideIcon } from "lucide-react";
 
 interface TimelineProps {
     items: TimelineItem[];
 }
 
+
+
 export default function Timeline({ items }: TimelineProps) {
+    const iconMap: Record<string, LucideIcon>  = {
+        briefcase: Briefcase,
+        code2: Code2,
+        graduation: GraduationCap,
+    }
+
     const generateConnectingLine = (item: TimelineItem, alignLeft: boolean) => {
+        const Icon = item.icon ? iconMap[item.icon] : undefined;
         return (
             <div
                 className="absolute top-1/2 -translate-y-1/2 z-20"
                 style={{ [alignLeft ? "right" : "left"]: "-52px" }}
             >
-                <div className="w-10 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-transparent" />
-                <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 border-4 border-white/30 flex items-center justify-center -mt-3">
-                    {item.icon && <Image src={item.icon} alt="" width={20} height={20} />}
+                <div className="w-15 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-transparent" />
+                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 border-4 border-white/30 flex items-center justify-center -mt-3">
+                    {Icon && <Icon className="w-4 h-4 text-white" />}
                 </div>
             </div>
         );

@@ -5,12 +5,6 @@ import { useRouter } from "next/navigation"
 
 const projects = [
     {
-        slug: "Home Automation System",
-        name: "home-automation",
-        description: "Description of project one.",
-        image: "/images/project1.jpg",
-    },
-    {
         slug: "Pallet Table DIY",
         name: "pallet-table",
         description: "Description of project two.",
