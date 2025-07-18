@@ -36,7 +36,7 @@ export default function NavTabs() {
                 <div
                     className={`flex items-center justify-center gap-2 px-0 py-2 sm:px-4 sm:py-2
                         rounded-full font-medium transition-all duration-200 w-full relative z-10
-                        ${isActive ? "text-white" : "text-gray-500 hover:text-gray-900"}`}
+                        ${isActive ? "text-white" : "text-gray-500 hover:text-white"}`}
                 >
                     {/* Mobile: icon only */}
                     <span className="sm:hidden flex items-center justify-center w-full">
@@ -54,7 +54,7 @@ export default function NavTabs() {
     }
 
     return (
-        <nav className="relative flex justify-center w-full mb-8">
+        <nav className="relative flex justify-center w-full mb-16">
             <div className="flex border-white border-2 border-dashed p-2 w-full rounded-full bg-white/5 shadow-inner relative overflow-hidden">
                 {/* Animated highlight bubble */}
                 <motion.div
