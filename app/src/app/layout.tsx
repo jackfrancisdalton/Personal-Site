@@ -23,9 +23,15 @@ export default function RootLayout({
         }}
       >
         <main className="flex justify-center items-start min-h-screen">
-          <div className="w-full max-w-4xl mt-20 rounded-3xl shadow-magic 
-            bg-neutral-900/80 backdrop-blur-xl p-12 
-            relative border border-white/10"
+          <div
+            className="
+              w-full
+              sm:max-w-2xl
+              lg:w-[60vw] lg:max-w-none
+              mt-20 rounded-3xl shadow-magic
+              bg-neutral-900/80 backdrop-blur-xl p-4 sm:p-8 lg:p-12
+              relative border border-white/10
+            "
           >
             <NavTabs />
             <AnimatedCard>
