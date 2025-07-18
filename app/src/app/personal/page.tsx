@@ -5,20 +5,32 @@ import { useRouter } from "next/navigation"
 
 const projects = [
     {
-        slug: "project-1",
-        name: "Project One",
+        slug: "Home Automation System",
+        name: "home-automation",
         description: "Description of project one.",
         image: "/images/project1.jpg",
     },
     {
-        slug: "project-2",
-        name: "Project Two",
+        slug: "Pallet Table DIY",
+        name: "pallet-table",
         description: "Description of project two.",
         image: "/images/project2.jpg",
     },
     {
-        slug: "project-3",
-        name: "Project Three",
+        slug: "Balcony DIY",
+        name: "balcony-diy",
+        description: "Description of project three.",
+        image: "/images/project3.jpg",
+    },
+    {
+        slug: "Music Projects",
+        name: "balcony-diy",
+        description: "Description of project three.",
+        image: "/images/project3.jpg",
+    },
+    {
+        slug: "French Certifications",
+        name: "frech-certiciations",
         description: "Description of project three.",
         image: "/images/project3.jpg",
     },

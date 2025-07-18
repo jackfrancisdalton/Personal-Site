@@ -35,7 +35,7 @@ export default function NavTabs() {
                     <span className="sm:hidden flex items-center justify-center w-full">
                         <Icon className="w-5 h-5" />
                     </span>
-                    
+
                     {/* Desktop: icon + label */}
                     <span className="hidden sm:inline-flex items-center gap-2">
                         <Icon className="w-5 h-5" />
@@ -48,7 +48,7 @@ export default function NavTabs() {
 
     return (
         <nav className="relative flex justify-center w-full mb-8">
-            <div className="flex w-full rounded-full bg-white/5 shadow-inner relative overflow-hidden">
+            <div className="flex border-white border-2 border-dashed p-2 w-full rounded-full bg-white/5 shadow-inner relative overflow-hidden">
                 {/* Animated highlight bubble */}
                 <motion.div
                     className="absolute top-0 left-0 h-full z-0"

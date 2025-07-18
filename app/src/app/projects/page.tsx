@@ -5,19 +5,19 @@ import { useRouter } from "next/navigation"
 
 const projects = [
     {
-        slug: "project-1",
-        name: "Project One",
+        slug: "gitwit",
+        name: "GitWit",
         description: "Description of project one.",
         image: "/images/project1.jpg",
     },
     {
-        slug: "project-2",
-        name: "Project Two",
+        slug: "monzo-dashboard",
+        name: "Monzo Dashboard",
         description: "Description of project two.",
         image: "/images/project2.jpg",
     },
     {
-        slug: "project-3",
+        slug: "CSI (Clip Search Investigator)",
         name: "Project Three",
         description: "Description of project three.",
         image: "/images/project3.jpg",
